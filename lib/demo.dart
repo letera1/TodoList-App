@@ -75,11 +75,7 @@ class _DemoPageState extends State<DemoPage> {
           child: ListView(
             padding: const EdgeInsets.fromLTRB(18, 16, 18, 110),
             children: [
-              _HeroPanel(
-                accent: accent,
-                glowMode: glowMode,
-                energy: energy,
-              ),
+              _HeroPanel(accent: accent, glowMode: glowMode, energy: energy),
               const SizedBox(height: 18),
               Row(
                 children: [
@@ -110,7 +106,9 @@ class _DemoPageState extends State<DemoPage> {
                           builder: (context) {
                             return AlertDialog(
                               title: const Text('Success'),
-                              content: const Text('Your futuristic email was sent.'),
+                              content: const Text(
+                                'Your futuristic email was sent.',
+                              ),
                               actions: [
                                 TextButton(
                                   onPressed: () => Navigator.of(context).pop(),
@@ -134,7 +132,8 @@ class _DemoPageState extends State<DemoPage> {
                 colors: accentColors,
                 onGlowChanged: (value) => setState(() => glowMode = value),
                 onEnergyChanged: (value) => setState(() => energy = value),
-                onPanelChanged: (index) => setState(() => selectedPanel = index),
+                onPanelChanged: (index) =>
+                    setState(() => selectedPanel = index),
               ),
               const SizedBox(height: 18),
               _ImageShowcase(accent: accent),
@@ -428,7 +427,11 @@ class _FeatureGrid extends StatelessWidget {
         _FeatureTile(accent: accent, icon: Icons.security, title: 'Secure'),
         _FeatureTile(accent: accent, icon: Icons.speed, title: 'Fast'),
         _FeatureTile(accent: accent, icon: Icons.devices, title: 'Responsive'),
-        _FeatureTile(accent: accent, icon: Icons.auto_awesome, title: 'Polished'),
+        _FeatureTile(
+          accent: accent,
+          icon: Icons.auto_awesome,
+          title: 'Polished',
+        ),
       ],
     );
   }

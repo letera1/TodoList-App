@@ -38,11 +38,7 @@ class MainPage extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            colors: [
-              Color(0xFF07111F),
-              Color(0xFF12324B),
-              Color(0xFF211440),
-            ],
+            colors: [Color(0xFF07111F), Color(0xFF12324B), Color(0xFF211440)],
           ),
         ),
         child: SafeArea(
@@ -63,7 +59,10 @@ class MainPage extends StatelessWidget {
                           color: Colors.white.withValues(alpha: 0.18),
                         ),
                       ),
-                      child: const Icon(Icons.auto_awesome, color: Color(0xFF78F0FF)),
+                      child: const Icon(
+                        Icons.auto_awesome,
+                        color: Color(0xFF78F0FF),
+                      ),
                     ),
                     const SizedBox(width: 12),
                     const Column(
@@ -102,11 +101,15 @@ class MainPage extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
                         border: Border.all(
-                          color: const Color(0xFF78F0FF).withValues(alpha: 0.35),
+                          color: const Color(
+                            0xFF78F0FF,
+                          ).withValues(alpha: 0.35),
                         ),
                         boxShadow: [
                           BoxShadow(
-                            color: const Color(0xFF4DD8FF).withValues(alpha: 0.16),
+                            color: const Color(
+                              0xFF4DD8FF,
+                            ).withValues(alpha: 0.16),
                             blurRadius: 34,
                             offset: const Offset(0, 18),
                           ),
@@ -130,7 +133,9 @@ class MainPage extends StatelessWidget {
                               vertical: 8,
                             ),
                             decoration: BoxDecoration(
-                              color: const Color(0xFF78F0FF).withValues(alpha: 0.14),
+                              color: const Color(
+                                0xFF78F0FF,
+                              ).withValues(alpha: 0.14),
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: const Text(
@@ -176,7 +181,10 @@ class MainPage extends StatelessWidget {
                                 label: const Text('Open Demo'),
                               ),
                               const SizedBox(width: 12),
-                              const Icon(Icons.touch_app, color: Color(0xFF78F0FF)),
+                              const Icon(
+                                Icons.touch_app,
+                                color: Color(0xFF78F0FF),
+                              ),
                             ],
                           ),
                           const Spacer(),
@@ -190,7 +198,11 @@ class MainPage extends StatelessWidget {
                   children: [
                     _StatTile(icon: Icons.speed, label: 'Fast', value: '99%'),
                     SizedBox(width: 12),
-                    _StatTile(icon: Icons.palette, label: 'Style', value: 'Neo'),
+                    _StatTile(
+                      icon: Icons.palette,
+                      label: 'Style',
+                      value: 'Neo',
+                    ),
                     SizedBox(width: 12),
                     _StatTile(icon: Icons.bolt, label: 'Power', value: 'Pro'),
                   ],
