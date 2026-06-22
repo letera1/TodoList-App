@@ -24,7 +24,6 @@ class MyApp extends StatelessWidget {
           surface: const Color(0xFF0B1426),
         ),
         scaffoldBackgroundColor: const Color(0xFF050B14),
-        useMaterial3: true,
       ),
       home: const MainPage(),
     );
